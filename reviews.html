@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы — VetCare</title>
+    <meta name="description" content="Отзывы клиентов ветеринарной клиники VetCare. Средняя оценка и мнения владельцев питомцев.">
+    <meta property="og:title" content="Отзывы клиентов — VetCare">
+    <meta property="og:description" content="Мнения владельцев питомцев о работе нашей клиники.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="icons/icon.svg">
+    <meta name="theme-color" content="#2c5f2d">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="emergency-bar">
+        🚨 Экстренная помощь 24/7 <a href="tel:+78005553535">+7 (800) 555-35-35</a>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 24 24" fill="#2c5f2d">
+                    <path d="M12 10.5c-1.5 0-2.5-1-2.5-2.5S10.5 5.5 12 5.5s2.5 1 2.5 2.5-1 2.5-2.5 2.5zM7 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM5.5 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm13 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM12 22c-3.5 0-6-2.5-6-6 0-2 1-3.5 2.5-4.5.8-.5 1.7-.5 2.5 0 .8.5 1.7.5 2.5 0 .8-.5 1.7-.5 2.5 0 1.5 1 2.5 2.5 2.5 4.5 0 3.5-2.5 6-6 6z"/>
+                </svg>
+                <span class="logo-text">VetCare</span>
+            </a>
+            <nav class="nav"></nav>
+            <button class="burger" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <nav class="breadcrumbs container"></nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Отзывы наших клиентов</h1>
+            <p>Мнения владельцев питомцев о работе нашей клиники</p>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <div class="container">
+            <div class="reviews-stats">
+                <div class="stat-box">
+                    <div class="stat-number" id="avgRating">0.0</div>
+                    <div class="stars" id="avgStars">☆☆☆☆☆</div>
+                    <div class="stat-label">Средняя оценка</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number" id="totalReviews">0</div>
+                    <div class="stat-label">Всего отзывов</div>
+                </div>
+            </div>
+
+            <div class="reviews-list" id="reviewsList"></div>
+
+            <div class="text-center" style="margin-top: 40px;">
+                <button class="btn btn-primary" onclick="handleLeaveReviewClick()">Оставить отзыв</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff">
+                            <path d="M12 10.5c-1.5 0-2.5-1-2.5-2.5S10.5 5.5 12 5.5s2.5 1 2.5 2.5-1 2.5-2.5 2.5zM7 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM5.5 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm13 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM12 22c-3.5 0-6-2.5-6-6 0-2 1-3.5 2.5-4.5.8-.5 1.7-.5 2.5 0 .8.5 1.7.5 2.5 0 .8-.5 1.7-.5 2.5 0 1.5 1 2.5 2.5 2.5 4.5 0 3.5-2.5 6-6 6z"/>
+                        </svg>
+                        <span class="logo-text">VetCare</span>
+                    </div>
+                    <p>Профессиональная ветеринарная помощь вашим питомцам</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <p>📍 г. Элиста, ул. Ленина, 15</p>
+                    <p>📞 +7 (800) 555-35-35</p>
+                    <p>✉️ info@vetcare.ru</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Режим работы</h4>
+                    <p>Пн-Пт: 9:00 — 20:00</p>
+                    <p>Сб: 10:00 — 18:00</p>
+                    <p>Вс: 10:00 — 16:00</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="about.html">О клинике</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="prices.html">Прайс-лист</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="reviews.html">Отзывы</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 VetCare. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Вернуться наверх">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const list = document.getElementById('reviewsList');
+            if (!list) return;
+            const reviews = JSON.parse(localStorage.getItem('vetcare_reviews') || '[]');
+            if (!reviews.length) {
+                list.innerHTML = '<div class="empty-reviews"><p>Пока нет отзывов. Будьте первым, кто оставит отзыв о нашей клинике!</p></div>';
+                document.getElementById('avgRating').textContent = '0.0';
+                document.getElementById('avgStars').textContent = '☆☆☆☆☆';
+                document.getElementById('totalReviews').textContent = '0';
+                return;
+            }
+            const total = reviews.reduce((s, r) => s + parseInt(r.rating, 10), 0);
+            const avg = (total / reviews.length).toFixed(1);
+            const full = Math.round(avg);
+            document.getElementById('avgRating').textContent = avg;
+            document.getElementById('avgStars').textContent = '★'.repeat(full) + '☆'.repeat(5 - full);
+            document.getElementById('totalReviews').textContent = reviews.length;
+
+            list.innerHTML = reviews.map(r => `
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <div class="review-avatar">${escapeHtml((r.user_name || '?').charAt(0).toUpperCase())}</div>
+                            <div>
+                                <h4>${escapeHtml(r.user_name || 'Аноним')}</h4>
+                                <p class="review-date">${escapeHtml(r.date || 'Недавно')}</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">${'★'.repeat(+r.rating) + '☆'.repeat(5 - +r.rating)}</div>
+                    </div>
+                    <div class="review-doctor">Врач: ${escapeHtml(r.doctor_name || 'Не указан')}</div>
+                    <p class="review-text">${escapeHtml(r.comment || '')}</p>
+                </div>
+            `).join('');
+        });
+
+        function handleLeaveReviewClick() {
+            const logged = localStorage.getItem('vetcare_logged_in') === 'true';
+            window.location.href = logged ? 'dashboard.html#feedback' : 'login.html';
+        }
+    </script>
+</body>
+</html>

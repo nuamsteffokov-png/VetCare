@@ -1,0 +1,20 @@
+{
+    "name": "VetCare — Ветеринарная клиника",
+    "short_name": "VetCare",
+    "description": "Профессиональная ветеринарная помощь с онлайн-записью",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#f5f7fa",
+    "theme_color": "#2c5f2d",
+    "lang": "ru",
+    "icons": [
+        {
+            "src": "icons/icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}

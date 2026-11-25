@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прайс-лист — VetCare</title>
+    <meta name="description" content="Актуальные цены на ветеринарные услуги клиники VetCare: терапия, вакцинация, хирургия, стоматология, УЗИ.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 24 24" fill="#2c5f2d"><path d="M12 10.5c-1.5 0-2.5-1-2.5-2.5S10.5 5.5 12 5.5s2.5 1 2.5 2.5-1 2.5-2.5 2.5zM7 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM5.5 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm13 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM12 22c-3.5 0-6-2.5-6-6 0-2 1-3.5 2.5-4.5.8-.5 1.7-.5 2.5 0 .8.5 1.7.5 2.5 0 .8-.5 1.7-.5 2.5 0 1.5 1 2.5 2.5 2.5 4.5 0 3.5-2.5 6-6 6z"/></svg>
+                <span class="logo-text">VetCare</span>
+            </a>
+            <nav class="nav"></nav>
+            <button class="burger" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+    <nav class="breadcrumbs container"></nav>
+    <section class="page-hero">
+        <div class="container">
+            <h1>Прайс-лист</h1>
+            <p>Актуальные цены на услуги клиники</p>
+        </div>
+    </section>
+    <section class="prices-section">
+        <div class="container">
+            <div class="price-search">
+                <input type="text" id="priceSearch" placeholder="🔍 Найти услугу...">
+            </div>
+            <div id="priceTable" class="price-table-wrap"></div>
+            <p class="price-note">* Указаны минимальные цены. Точная стоимость зависит от сложности случая и назначается врачом после осмотра.</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 10.5c-1.5 0-2.5-1-2.5-2.5S10.5 5.5 12 5.5s2.5 1 2.5 2.5-1 2.5-2.5 2.5zM7 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM5.5 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm13 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM12 22c-3.5 0-6-2.5-6-6 0-2 1-3.5 2.5-4.5.8-.5 1.7-.5 2.5 0 .8.5 1.7.5 2.5 0 .8-.5 1.7-.5 2.5 0 1.5 1 2.5 2.5 2.5 4.5 0 3.5-2.5 6-6 6z"/></svg>
+                        <span class="logo-text">VetCare</span>
+                    </div>
+                    <p>Профессиональная ветеринарная помощь вашим питомцам</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <p>📍 г. Элиста, ул. Ленина, 15</p>
+                    <p>📞 +7 (800) 555-35-35</p>
+                    <p>✉️ info@vetcare.ru</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Режим работы</h4>
+                    <p>Пн-Пт: 9:00 — 20:00</p>
+                    <p>Сб: 10:00 — 18:00</p>
+                    <p>Вс: 10:00 — 16:00</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="about.html">О клинике</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="prices.html">Прайс-лист</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="reviews.html">Отзывы</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 VetCare. Все права защищены.</p></div>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Наверх">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    </button>
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrap = document.getElementById('priceTable');
+            const search = document.getElementById('priceSearch');
+            function render(filter = '') {
+                const f = filter.toLowerCase().trim();
+                const items = SERVICES.filter(s => s.name.toLowerCase().includes(f));
+                if (!items.length) { wrap.innerHTML = '<p style="text-align:center;color:#666;padding:30px;">Ничего не найдено</p>'; return; }
+                wrap.innerHTML = `<table class="price-table">
+                    <thead><tr><th>Услуга</th><th>Описание</th><th>Цена</th></tr></thead>
+                    <tbody>${items.map(s => `
+                        <tr>
+                            <td><strong>${escapeHtml(s.name)}</strong></td>
+                            <td>${escapeHtml(s.desc)}</td>
+                            <td class="price-val">от ${s.price.toLocaleString('ru-RU')} ₽</td>
+                        </tr>`).join('')}
+                    </tbody>
+                </table>`;
+            }
+            render();
+            search.addEventListener('input', e => render(e.target.value));
+        });
+    </script>
+</body>
+</html>

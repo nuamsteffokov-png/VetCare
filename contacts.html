@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — VetCare</title>
+    <meta name="description" content="Контакты ветеринарной клиники VetCare: адрес, телефон, email, режим работы, карта проезда.">
+    <meta property="og:title" content="Контакты — VetCare">
+    <meta property="og:description" content="Свяжитесь с нами любым удобным способом.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="icons/icon.svg">
+    <meta name="theme-color" content="#2c5f2d">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="emergency-bar">
+        🚨 Экстренная помощь 24/7 <a href="tel:+78005553535">+7 (800) 555-35-35</a>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 24 24" fill="#2c5f2d">
+                    <path d="M12 10.5c-1.5 0-2.5-1-2.5-2.5S10.5 5.5 12 5.5s2.5 1 2.5 2.5-1 2.5-2.5 2.5zM7 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM5.5 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm13 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM12 22c-3.5 0-6-2.5-6-6 0-2 1-3.5 2.5-4.5.8-.5 1.7-.5 2.5 0 .8.5 1.7.5 2.5 0 .8-.5 1.7-.5 2.5 0 1.5 1 2.5 2.5 2.5 4.5 0 3.5-2.5 6-6 6z"/>
+                </svg>
+                <span class="logo-text">VetCare</span>
+            </a>
+            <nav class="nav"></nav>
+            <button class="burger" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <nav class="breadcrumbs container"></nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Контакты</h1>
+            <p>Свяжитесь с нами любым удобным способом</p>
+        </div>
+    </section>
+
+    <section class="contacts-info">
+        <div class="container">
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="#e74c3c" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <h3>Адрес</h3>
+                    <p>г. Элиста, ул. Ленина, 15</p>
+                    <p class="contact-note">Рядом с центральным парком</p>
+                </div>
+                <div class="contact-card">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="#2c5f2d" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <h3>Телефон</h3>
+                    <p>+7 (800) 555-35-35</p>
+                    <p class="contact-note">Бесплатный звонок по России</p>
+                </div>
+                <div class="contact-card">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="#3498db" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <h3>Email</h3>
+                    <p>info@vetcare.ru</p>
+                    <p class="contact-note">Ответим в течение 24 часов</p>
+                </div>
+                <div class="contact-card">
+                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="#f39c12" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <h3>Режим работы</h3>
+                    <p>Пн-Пт: 9:00 — 20:00</p>
+                    <p>Сб: 10:00 — 18:00</p>
+                    <p>Вс: 10:00 — 16:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts-main">
+        <div class="container">
+            <div class="contacts-layout">
+                <div class="map-container">
+                    <h2>Как нас найти</h2>
+                    <!-- Координаты примерные — замени на реальные: Яндекс.Карты → ПКМ по точке → «Что здесь?» -->
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?ll=44.255%2C46.307&z=14&pt=44.255,46.307,pm2rdm"
+                        width="100%" height="400" frameborder="0"
+                        style="border-radius:10px;border:0;box-shadow:0 5px 15px rgba(0,0,0,0.1);"
+                        allowfullscreen loading="lazy"
+                        title="Карта: VetCare, г. Элиста, ул. Ленина, 15">
+                    </iframe>
+                    <p style="margin-top:15px;color:#666;">📍 г. Элиста, ул. Ленина, 15 — рядом с центральным парком</p>
+                </div>
+
+                <div class="contact-form-container">
+                    <h2>Напишите нам</h2>
+                    <p class="form-subtitle">Заполните форму, и мы ответим вам в ближайшее время</p>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="contact-name">Ваше имя *</label>
+                            <input type="text" id="contact-name" name="name" required maxlength="80" placeholder="Введите ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email *</label>
+                            <input type="email" id="contact-email" name="email" required maxlength="120" placeholder="example@mail.ru">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">Телефон</label>
+                            <input type="tel" id="contact-phone" name="phone" placeholder="+7 (___) ___-__-__">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Тема обращения *</label>
+                            <select id="contact-subject" name="subject" required>
+                                <option value="">Выберите тему</option>
+                                <option value="appointment">Запись на прием</option>
+                                <option value="question">Вопрос об услугах</option>
+                                <option value="complaint">Жалоба</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Сообщение *</label>
+                            <textarea id="contact-message" name="message" rows="5" required maxlength="1000" placeholder="Опишите ваш вопрос или проблему..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts-extra">
+        <div class="container">
+            <h2 class="section-title">Полезная информация</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2c5f2d" stroke-width="2" style="margin-bottom: 15px;"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    <h3>Как добраться</h3>
+                    <p>Клиника расположена в центре города. Рядом есть бесплатная парковка для клиентов.</p>
+                </div>
+                <div class="info-card">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2c5f2d" stroke-width="2" style="margin-bottom: 15px;"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
+                    <h3>Общественный транспорт</h3>
+                    <p>Автобусы № 5, 12, 15. Остановка "Центральный парк".</p>
+                </div>
+                <div class="info-card">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2c5f2d" stroke-width="2" style="margin-bottom: 15px;"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                    <h3>Доступность</h3>
+                    <p>Клиника оборудована пандусом и лифтом для маломобильных групп населения.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff">
+                            <path d="M12 10.5c-1.5 0-2.5-1-2.5-2.5S10.5 5.5 12 5.5s2.5 1 2.5 2.5-1 2.5-2.5 2.5zM7 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM5.5 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm13 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM12 22c-3.5 0-6-2.5-6-6 0-2 1-3.5 2.5-4.5.8-.5 1.7-.5 2.5 0 .8.5 1.7.5 2.5 0 .8-.5 1.7-.5 2.5 0 1.5 1 2.5 2.5 2.5 4.5 0 3.5-2.5 6-6 6z"/>
+                        </svg>
+                        <span class="logo-text">VetCare</span>
+                    </div>
+                    <p>Профессиональная ветеринарная помощь вашим питомцам</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <p>📍 г. Элиста, ул. Ленина, 15</p>
+                    <p>📞 +7 (800) 555-35-35</p>
+                    <p>✉️ info@vetcare.ru</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Режим работы</h4>
+                    <p>Пн-Пт: 9:00 — 20:00</p>
+                    <p>Сб: 10:00 — 18:00</p>
+                    <p>Вс: 10:00 — 16:00</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="about.html">О клинике</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="prices.html">Прайс-лист</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="reviews.html">Отзывы</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 VetCare. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Вернуться наверх">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+    </button>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

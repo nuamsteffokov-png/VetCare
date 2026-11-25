@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard.html
+Sitemap: http://localhost/sitemap.xml

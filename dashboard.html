@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет — VetCare</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#2c5f2d">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 24 24" fill="#2c5f2d">
+                    <path d="M12 10.5c-1.5 0-2.5-1-2.5-2.5S10.5 5.5 12 5.5s2.5 1 2.5 2.5-1 2.5-2.5 2.5zM7 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM5.5 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm13 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM12 22c-3.5 0-6-2.5-6-6 0-2 1-3.5 2.5-4.5.8-.5 1.7-.5 2.5 0 .8.5 1.7.5 2.5 0 .8-.5 1.7-.5 2.5 0 1.5 1 2.5 2.5 2.5 4.5 0 3.5-2.5 6-6 6z"/>
+                </svg>
+                <span class="logo-text">VetCare</span>
+            </a>
+            <nav class="nav"></nav>
+            <button class="burger" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <nav class="breadcrumbs container"></nav>
+
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-layout">
+                <!-- Боковое меню -->
+                <aside class="dashboard-sidebar">
+                    <div class="user-info">
+                        <div class="user-avatar"></div>
+                        <h3 id="user-name">Загрузка...</h3>
+                        <p id="user-email"></p>
+                    </div>
+                    <nav class="dashboard-nav">
+                        <a href="#" class="dash-link active" data-tab="pets">🐾 Мои питомцы</a>
+                        <a href="#" class="dash-link" data-tab="appointment">📅 Запись на приём</a>
+                        <a href="#" class="dash-link" data-tab="history">📋 История визитов</a>
+                        <a href="#" class="dash-link" data-tab="feedback">⭐ Оставить отзыв</a>
+                        <a href="#" class="dash-link" data-tab="settings">⚙️ Настройки профиля</a>
+                    </nav>
+                </aside>
+
+                <main class="dashboard-content">
+                    <!-- Мои питомцы -->
+                    <div class="dash-tab active" id="tab-pets">
+                        <h2>Мои питомцы</h2>
+                        <div id="vaccinationReminder" style="display:none;"></div>
+                        <button class="btn btn-primary" onclick="showPetForm()">+ Добавить питомца</button>
+
+                        <div class="pets-list" id="petsList"></div>
+
+                        <div class="pet-form" id="petForm" style="display: none;">
+                            <h3>Добавить питомца</h3>
+                            <form id="addPetForm">
+                                <div class="form-group">
+                                    <label for="pet-name">Кличка</label>
+                                    <input type="text" id="pet-name" name="pet_name" required maxlength="60">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pet-species">Вид животного</label>
+                                    <select id="pet-species" name="species" required>
+                                        <option value="">Выберите вид</option>
+                                        <option value="Собака">Собака</option>
+                                        <option value="Кошка">Кошка</option>
+                                        <option value="Птица">Птица</option>
+                                        <option value="Грызун">Грызун</option>
+                                        <option value="Другое">Другое</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pet-breed">Порода</label>
+                                    <input type="text" id="pet-breed" name="breed" required maxlength="60">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="pet-age">Возраст (лет)</label>
+                                        <input type="number" id="pet-age" name="age" min="0" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pet-weight">Вес (кг)</label>
+                                        <input type="number" id="pet-weight" name="weight" step="0.1" min="0" required>
+                                    </div>
+                                </div>
+                                <div class="form-buttons">
+                                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                                    <button type="button" class="btn btn-secondary" onclick="hidePetForm()">Отмена</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Запись на приём -->
+                    <div class="dash-tab" id="tab-appointment">
+                        <h2>Запись на приём</h2>
+                        <form class="appointment-form" id="appointmentForm">
+                            <div class="form-group">
+                                <label for="app-pet">Выберите питомца</label>
+                                <select id="app-pet" name="pet_id" required>
+                                    <option value="">Выберите питомца</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="app-doctor">Выберите врача</label>
+                                <select id="app-doctor" name="doctor_id" required>
+                                    <option value="">Выберите врача</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="app-service">Услуга</label>
+                                <select id="app-service" name="service" required>
+                                    <option value="">Выберите услугу</option>
+                                    <option value="Осмотр">Осмотр</option>
+                                    <option value="Вакцинация">Вакцинация</option>
+                                    <option value="Анализы">Анализы</option>
+                                    <option value="Хирургия">Хирургия</option>
+                                    <option value="Стоматология">Стоматология</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="app-date">Дата</label>
+                                <input type="date" id="app-date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Свободное время (выберите слот)</label>
+                                <div class="app-slots" id="app-slots">
+                                    <p class="med-empty">Выберите врача и дату, чтобы увидеть слоты</p>
+                                </div>
+                                <input type="hidden" id="app-time" name="time" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="app-comment">Комментарий</label>
+                                <textarea id="app-comment" name="comment" rows="3" maxlength="500" placeholder="Опишите проблему или причину визита"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Записаться</button>
+                        </form>
+
+                        <div class="appointments-list" id="appointmentsList">
+                            <h3>Мои записи</h3>
+                        </div>
+                    </div>
+
+                    <!-- История визитов -->
+                    <div class="dash-tab" id="tab-history">
+                        <h2>История визитов</h2>
+                        <div class="history-list" id="historyList">
+                            <div class="history-card">
+                                <div class="history-date">15.01.2026</div>
+                                <div class="history-info">
+                                    <h4>Осмотр — Барсик</h4>
+                                    <p>Врач: Петрова Мария Сергеевна</p>
+                                    <p>Диагноз: Здоров, рекомендована вакцинация</p>
+                                </div>
+                            </div>
+                            <div class="history-card">
+                                <div class="history-date">10.12.2025</div>
+                                <div class="history-info">
+                                    <h4>Вакцинация — Шарик</h4>
+                                    <p>Врач: Иванов Иван Иванович</p>
+                                    <p>Вакцина: Nobivac DHPPi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Оставить отзыв -->
+                    <div class="dash-tab" id="tab-feedback">
+                        <h2>Оставить отзыв</h2>
+                        <form class="feedback-form" id="dashboardFeedbackForm">
+                            <div class="form-group">
+                                <label for="fb-doctor">Врач</label>
+                                <select id="fb-doctor" name="doctor_id" required>
+                                    <option value="">Выберите врача</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Оценка</label>
+                                <div class="rating">
+                                    <input type="radio" id="star5" name="rating" value="5" required>
+                                    <label for="star5">★</label>
+                                    <input type="radio" id="star4" name="rating" value="4">
+                                    <label for="star4">★</label>
+                                    <input type="radio" id="star3" name="rating" value="3">
+                                    <label for="star3">★</label>
+                                    <input type="radio" id="star2" name="rating" value="2">
+                                    <label for="star2">★</label>
+                                    <input type="radio" id="star1" name="rating" value="1">
+                                    <label for="star1">★</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="fb-comment">Комментарий</label>
+                                <textarea id="fb-comment" name="comment" rows="4" required maxlength="1000" placeholder="Поделитесь вашим опытом..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+                        </form>
+                    </div>
+
+                    <!-- Настройки профиля -->
+                    <div class="dash-tab" id="tab-settings">
+                        <h2>Настройки профиля</h2>
+                        <form class="settings-form" id="settingsForm">
+                            <div class="form-group">
+                                <label for="set-fio">ФИО</label>
+                                <input type="text" id="set-fio" name="fio" maxlength="120">
+                            </div>
+                            <div class="form-group">
+                                <label for="set-email">Email</label>
+                                <input type="email" id="set-email" name="email" maxlength="120">
+                            </div>
+                            <div class="form-group">
+                                <label for="set-phone">Телефон</label>
+                                <input type="tel" id="set-phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="set-password">Новый пароль (оставьте пустым, если не хотите менять)</label>
+                                <input type="password" id="set-password" name="password" placeholder="Новый пароль">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                        </form>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

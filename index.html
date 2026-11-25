@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetCare — Ветеринарная клиника в Элисте</title>
+    <meta name="description" content="Ветеринарная клиника VetCare: онлайн-запись, опытные врачи, современное оборудование, экстренная помощь 24/7. Забота о ваших питомцах.">
+    <meta property="og:title" content="VetCare — Ветеринарная клиника">
+    <meta property="og:description" content="Профессиональная ветеринарная помощь с онлайн-записью и электронными медкартами.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="icons/icon.svg">
+    <meta name="theme-color" content="#2c5f2d">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VeterinaryCare",
+      "name": "VetCare",
+      "image": "icons/icon.svg",
+      "telephone": "+7 (800) 555-35-35",
+      "email": "info@vetcare.ru",
+      "address": {"@type": "PostalAddress", "streetAddress": "ул. Ленина, 15", "addressLocality": "Элиста", "addressCountry": "RU"},
+      "openingHours": ["Mo-Fr 09:00-20:00", "Sa 10:00-18:00", "Su 10:00-16:00"],
+      "priceRange": "₽₽"
+    }
+    </script>
+</head>
+<body>
+    <!-- Экстренная полоса -->
+    <div class="emergency-bar">
+        🚨 Экстренная помощь 24/7 <a href="tel:+78005553535">+7 (800) 555-35-35</a>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 24 24" fill="#2c5f2d"><path d="M12 10.5c-1.5 0-2.5-1-2.5-2.5S10.5 5.5 12 5.5s2.5 1 2.5 2.5-1 2.5-2.5 2.5zM7 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM5.5 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm13 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM12 22c-3.5 0-6-2.5-6-6 0-2 1-3.5 2.5-4.5.8-.5 1.7-.5 2.5 0 .8.5 1.7.5 2.5 0 .8-.5 1.7-.5 2.5 0 1.5 1 2.5 2.5 2.5 4.5 0 3.5-2.5 6-6 6z"/></svg>
+                <span class="logo-text">VetCare</span>
+            </a>
+            <nav class="nav"></nav>
+            <button class="burger" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Забота о ваших питомцах — наша миссия</h1>
+                <p class="hero-subtitle">Профессиональная ветеринарная помощь с онлайн-записью и электронными медицинскими картами</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openQuickAppointment(event)">Быстрая запись</button>
+                    <a href="services.html" class="btn btn-secondary">Наши услуги</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="emergency-hero">
+            <div class="container" style="padding:0;">
+                <div>
+                    <h2>🚨 Экстренная ветеринарная помощь</h2>
+                    <p>Круглосуточно. Приедем или примем питомца в любое время</p>
+                </div>
+                <div class="emergency-phone"><a href="tel:+78005553535">+7 (800) 555-35-35</a></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают VetCare</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="#2c5f2d" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                    <h3>Онлайн-запись</h3>
+                    <p>Запишитесь к ветеринару в удобное время без очередей и звонков</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="#2c5f2d" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    <h3>Электронная карта</h3>
+                    <p>История прививок и визитов питомца в одном месте</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="#2c5f2d" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    <h3>Опытные врачи</h3>
+                    <p>Команда квалифицированных специалистов с многолетним стажем</p>
+                </div>
+                <div class="feature-card">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="#2c5f2d" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <h3>Обратная связь</h3>
+                    <p>Оценивайте качество услуг и помогайте нам становиться лучше</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-preview">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services-grid" id="servicesGrid"></div>
+        </div>
+    </section>
+
+    <section class="doctors-preview">
+        <div class="container">
+            <h2 class="section-title">Наши специалисты</h2>
+            <div class="doctors-grid" id="doctorsGrid"></div>
+            <div class="text-center" style="margin-top:30px;">
+                <a href="services.html" class="btn btn-primary">Все специалисты</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-preview" style="background:#fff;">
+        <div class="container">
+            <h2 class="section-title">Отзывы клиентов</h2>
+            <div class="reviews-carousel" id="homeReviews"></div>
+            <div class="text-center" style="margin-top:30px;">
+                <a href="reviews.html" class="btn btn-primary">Все отзывы</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback-section">
+        <div class="container">
+            <h2 class="section-title">Обратная связь</h2>
+            <p class="section-subtitle">Есть вопросы? Напишите нам</p>
+            <form class="feedback-form" id="feedbackForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fb-name">Ваше имя</label>
+                        <input type="text" id="fb-name" name="name" required maxlength="80">
+                    </div>
+                    <div class="form-group">
+                        <label for="fb-email">Email</label>
+                        <input type="email" id="fb-email" name="email" required maxlength="120">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fb-subject">Тема</label>
+                    <input type="text" id="fb-subject" name="subject" required maxlength="120">
+                </div>
+                <div class="form-group">
+                    <label for="fb-message">Сообщение</label>
+                    <textarea id="fb-message" name="message" rows="5" required maxlength="1000"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 10.5c-1.5 0-2.5-1-2.5-2.5S10.5 5.5 12 5.5s2.5 1 2.5 2.5-1 2.5-2.5 2.5zM7 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm10 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM5.5 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm13 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM12 22c-3.5 0-6-2.5-6-6 0-2 1-3.5 2.5-4.5.8-.5 1.7-.5 2.5 0 .8.5 1.7.5 2.5 0 .8-.5 1.7-.5 2.5 0 1.5 1 2.5 2.5 2.5 4.5 0 3.5-2.5 6-6 6z"/></svg>
+                        <span class="logo-text">VetCare</span>
+                    </div>
+                    <p>Профессиональная ветеринарная помощь вашим питомцам</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <p>📍 г. Элиста, ул. Ленина, 15</p>
+                    <p>📞 +7 (800) 555-35-35</p>
+                    <p>✉️ info@vetcare.ru</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Режим работы</h4>
+                    <p>Пн-Пт: 9:00 — 20:00</p>
+                    <p>Сб: 10:00 — 18:00</p>
+                    <p>Вс: 10:00 — 16:00</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <a href="index.html">Главная</a>
+                    <a href="about.html">О клинике</a>
+                    <a href="services.html">Услуги</a>
+                    <a href="prices.html">Прайс-лист</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contacts.html">Контакты</a>
+                    <a href="reviews.html">Отзывы</a>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>© 2026 VetCare. Все права защищены.</p></div>
+        </div>
+    </footer>
+
+    <!-- Модалка быстрой записи -->
+    <div class="modal-overlay" id="quickAppointmentModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeQuickAppointment()">×</button>
+            <h2>📅 Быстрая запись</h2>
+            <p style="color:#666;margin-bottom:20px;">Оставьте телефон — перезвоним в течение 15 минут</p>
+            <form id="quickAppointmentForm">
+                <div class="form-group">
+                    <label for="quick-name">Ваше имя</label>
+                    <input type="text" id="quick-name" required maxlength="80">
+                </div>
+                <div class="form-group">
+                    <label for="quick-phone">Телефон</label>
+                    <input type="tel" id="quick-phone" required placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="form-group">
+                    <label for="quick-service">Услуга</label>
+                    <select id="quick-service" required></select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Записаться</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sticky-кнопка -->
+    <a href="#" class="sticky-appointment" onclick="openQuickAppointment(event)">📅 Записаться на приём</a>
+
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Наверх">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+    </button>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Карусель отзывов на главной
+        document.addEventListener('DOMContentLoaded', () => {
+            const box = document.getElementById('homeReviews');
+            if (!box) return;
+            const reviews = JSON.parse(localStorage.getItem('vetcare_reviews') || '[]').slice(0, 6);
+            if (!reviews.length) {
+                box.innerHTML = '<p style="color:#666;">Пока нет отзывов. <a href="reviews.html" style="color:#2c5f2d;">Оставить первый</a></p>';
+                return;
+            }
+            box.innerHTML = reviews.map(r => `
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <div class="review-avatar">${(r.user_name || '?').charAt(0).toUpperCase()}</div>
+                            <div>
+                                <h4>${escapeHtml(r.user_name || 'Аноним')}</h4>
+                                <p class="review-date">${escapeHtml(r.date || '')}</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">${'★'.repeat(+r.rating)}</div>
+                    </div>
+                    <div class="review-doctor">Врач: ${escapeHtml(r.doctor_name || '')}</div>
+                    <p class="review-text">${escapeHtml(r.comment || '')}</p>
+                </div>
+            `).join('');
+        });
+    </script>
+</body>
+</html>
